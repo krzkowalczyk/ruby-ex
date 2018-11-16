@@ -1,6 +1,5 @@
 require 'rack/lobster'
 
-require_relative 'config/environment'
 require 'prometheus/middleware/collector'
 require 'prometheus/middleware/exporter'
 
