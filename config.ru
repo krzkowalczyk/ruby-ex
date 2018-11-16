@@ -1,5 +1,12 @@
 require 'rack/lobster'
 
+require_relative 'config/environment'
+require 'prometheus/middleware/collector'
+require 'prometheus/middleware/exporter'
+
+use Prometheus::Middleware::Collector
+use Prometheus::Middleware::Exporter
+
 map '/health' do
   health = proc do |env|
     [200, { "Content-Type" => "text/html" }, ["1"]]
