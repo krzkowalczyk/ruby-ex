@@ -1,4 +1,5 @@
 require 'rack/lobster'
+require 'dummy'
 
 require 'prometheus/middleware/collector'
 require 'prometheus/middleware/exporter'
